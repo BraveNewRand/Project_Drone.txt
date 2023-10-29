@@ -1,0 +1,31 @@
+## this is a sample function for controlling a drone's takeoff and landing using Python:
+
+
+
+import time
+
+class Drone:
+    def __init__(self):
+        self.is_flying = False
+
+    def takeoff(self):
+        if not self.is_flying:
+            print("Drone is taking off.")
+            time.sleep(2)  # Simulate takeoff duration
+            self.is_flying = True
+        else:
+            print("Drone is already in the air.")
+
+    def land(self):
+        if self.is_flying:
+            print("Drone is landing.")
+            time.sleep(2)  # Simulate landing duration
+            self.is_flying = False
+        else:
+            print("Drone is already on the ground.")
+
+# Example usage
+my_drone = Drone()
+my_drone.takeoff()
+my_drone.land()
+
